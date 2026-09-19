@@ -1,0 +1,12 @@
+{
+  "name": "job-mission-control",
+  "version": "0.1.0",
+  "description": "Local web dashboard to manage & track job applications (Google Sheet backend, Gmail drafts, coldpitch pipeline).",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.70.0"
+  }
+}

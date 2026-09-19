@@ -1,0 +1,56 @@
+{
+  "manifest_version": 3,
+  "name": "Job Tracker",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2sgHHCQZF3cuSFiZ5/yMj18wATS/A1jwpmrvv0tGOM91SGJsd2wvWNEPA0pLvKon43TR+w/UeVVPsztWHAKZHXWCmrvNtK6V6jSFqwu7kBd0+88SIAJf/YFZ4rVzcwThFKrqiXChErUJu4JUGHQtwg8AQDeWRS6JEBb2YZvoSOQrFMP/M7cOevbfHvC/ojn10I3yYWMnj7v3KJ6CPjFZOLzCNzi94p5wvGEddwug5svLHuD/z30ubkKBTTIyNIe6AKxTid+Oyb2p33TEmyq5BdcVoBHjekQ57dEOyak3ifMJ+suI8YWSWphXf42d4dtwYTPEK/RsZLBPXwWF8Fh+fQIDAQAB",
+  "version": "1.0.0",
+  "description": "Log job applications to Google Sheets in one click",
+  "permissions": ["identity", "storage", "activeTab", "scripting", "contextMenus"],
+  "host_permissions": [
+    "https://sheets.googleapis.com/*",
+    "https://mail.googleapis.com/*",
+    "https://www.linkedin.com/*",
+    "https://www.indeed.com/*",
+    "https://www.naukri.com/*",
+    "http://localhost:4319/*"
+  ],
+  "oauth2": {
+    "client_id": "YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/spreadsheets",
+      "https://www.googleapis.com/auth/gmail.compose"
+    ]
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {},
+  "commands": {
+    "open_panel": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+J",
+        "mac": "Command+Shift+J"
+      },
+      "description": "Open Job Tracker"
+    },
+    "fill_company": {
+      "suggested_key": { "default": "Ctrl+1", "mac": "Ctrl+1" },
+      "description": "Fill Company from selection"
+    },
+    "fill_role": {
+      "suggested_key": { "default": "Ctrl+2", "mac": "Ctrl+2" },
+      "description": "Fill Role from selection"
+    },
+    "fill_contact": {
+      "suggested_key": { "default": "Ctrl+3", "mac": "Ctrl+3" },
+      "description": "Fill Contact Name from selection"
+    }
+  },
+  "options_page": "options/options.html",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

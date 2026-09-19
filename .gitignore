@@ -1,0 +1,18 @@
+config.js
+.DS_Store
+
+# local runtime data and secrets
+data/
+*.env
+!.env.example
+credentials.json
+token.json
+*.key
+
+# dependencies and generated output
+node_modules/
+.venv/
+__pycache__/
+*.pyc
+dist/
+build/

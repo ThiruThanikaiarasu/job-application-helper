@@ -1,0 +1,23 @@
+# dependencies
+node_modules/
+
+# local secrets & runtime state — settings.json holds the OAuth refresh token,
+# Google client secret, Sheet ID, and API keys. NEVER commit this.
+data/
+
+# local environment overrides
+.env
+.env.*
+!.env.example
+
+# logs / temp
+*.log
+scratch/
+
+# os / editor
+.DS_Store
+.idea/
+.vscode/
+
+# design reference bundle (not app code)
+design_handoff_job_mission_control*/

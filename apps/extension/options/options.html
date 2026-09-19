@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Job Tracker Settings</title>
+  <style>
+    body { font-family: system-ui, sans-serif; font-size: 14px; max-width: 400px; margin: 40px auto; color: #111; }
+    h2 { margin-bottom: 16px; }
+    .field { margin-bottom: 14px; }
+    label { display: block; margin-bottom: 4px; color: #555; font-size: 12px; }
+    input { width: 100%; padding: 6px 8px; border: 1px solid #ddd; border-radius: 4px; font-size: 14px; box-sizing: border-box; }
+    small { color: #888; font-size: 11px; }
+    button { margin-top: 4px; padding: 7px 16px; background: #4285f4; color: #fff; border: none; border-radius: 4px; cursor: pointer; }
+    #status { margin-top: 10px; font-size: 12px; color: #188038; }
+  </style>
+</head>
+<body>
+  <h2>Settings</h2>
+
+  <div class="field">
+    <label>Google Sheet ID</label>
+    <input id="sheetId" type="text" placeholder="1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgVE2upms" />
+    <small>From the sheet URL: /spreadsheets/d/<strong>SHEET_ID</strong>/edit</small>
+  </div>
+
+  <div class="field">
+    <label>Sheet Tab Name</label>
+    <input id="sheetTab" type="text" placeholder="Sheet1" />
+    <small>Exact tab name at the bottom of your spreadsheet</small>
+  </div>
+
+  <button id="save">Save</button>
+  <p id="status"></p>
+
+  <script src="options.js"></script>
+</body>
+</html>

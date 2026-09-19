@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <h2>Log Application</h2>
+
+  <form id="job-form">
+    <label>Company
+      <input id="company" type="text" placeholder="Acme Corp" required />
+    </label>
+    <label>Role
+      <input id="role" type="text" placeholder="Software Engineer" required />
+    </label>
+    <label>Contact
+      <input id="contact" type="text" placeholder="hr@acme.com" />
+    </label>
+    <label>URL
+      <input id="url" type="url" />
+    </label>
+    <label>Notes
+      <input id="notes" type="text" placeholder="optional" />
+    </label>
+
+    <button type="submit" id="log-btn">Log to Sheet</button>
+  </form>
+
+  <p id="status"></p>
+
+  <footer>
+    <a id="settings-link" href="#">⚙ Settings</a>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>

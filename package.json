@@ -1,0 +1,12 @@
+{
+  "name": "job-application-helper",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Chrome extension, local job dashboard, and Coldpitch research agent in one repository.",
+  "scripts": {
+    "start": "npm --prefix apps/dashboard start",
+    "install:dashboard": "npm --prefix apps/dashboard install",
+    "check": "node --check apps/dashboard/server.js && node --check apps/dashboard/pipeline.js && node --check apps/dashboard/public/app.js",
+    "check:extension": "node --check apps/extension/background.js && node --check apps/extension/content.js && node --check apps/extension/popup/popup.js && node --check apps/extension/options/options.js"
+  }
+}
